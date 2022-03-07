@@ -8,7 +8,8 @@
       "$w.ReadOnlyMixin",
       "$w.ClickableMixin",
       "$w.RequiredMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "DatePicker.js" },
@@ -642,7 +643,40 @@
               {  } },
         "extra":
           {  } } ],
-  "operations": [],
+  "operations":
+    [ { "name": "onViewChange",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "handler",
+              "type": "$w.DatePickerEventHandler",
+              "doc": "The name of the function or\n the function expression to trigger when the date picker's view changes." },
+            { "name": "operation",
+              "type": "$w.DatePickerOperation",
+              "doc": "The name of the operation or\n the function expression to trigger when the date picker's view changes." },
+            { "name": "timeout",
+              "type": "number",
+              "doc": "The name of the operation or\n the function expression to trigger when the date picker's view changes." } ],
+        "ret":
+          { "type": "$w.DatePicker",
+            "doc": "The audio player that triggered the event." },
+        "locations":
+          [ { "lineno": 391,
+              "filename": "DatePicker.js" } ],
+        "docs":
+          { "summary": "Adds an event handler that triggers when the date picker's view changes.",
+            "description":
+              [ "When a site visitor views a new month or year in the date picker, the event handler is triggered. ",
+                " Selecting a new day in the current month doesn't trigger the event handler, as the month in view doesn't change. ",
+                " ",
+                " Note that each time a site visitor enters the date picker, they initiate the view, triggering the event handler." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "eventType": "onViewChange" } } ],
   "callbacks": [],
   "messages":
     [ { "name": "DateRange",

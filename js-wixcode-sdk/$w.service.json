@@ -1,6 +1,7 @@
 { "name": "$w",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "wixCode.js" },
@@ -271,7 +272,46 @@
         "extra":
           {  } } ],
   "callbacks":
-    [ { "name": "EventHandler",
+    [ { "name": "DatePickerEventHandler",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "event",
+              "type": "$w.DatePicker",
+              "doc": "The date picker event that occurred." } ],
+        "ret":
+          { "type": "void" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "DatePickerEvent.js" } ],
+        "docs":
+          { "summary": "Handles events triggered when the date picker's view changes.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "DatePickerOperation",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "void" },
+        "locations":
+          [ { "lineno": 413,
+              "filename": "DatePicker.js" } ],
+        "docs":
+          { "summary": "Handles operations triggered when the date picker's view changes.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "EventHandler",
         "labels": [],
         "nameParams": [],
         "params":
