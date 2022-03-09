@@ -646,21 +646,21 @@
   "operations":
     [ { "name": "onViewChange",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "handler",
               "type": "$w.DatePickerEventHandler",
-              "doc": "The name of the function or\n the function expression to trigger when the date picker's view changes." },
+              "doc": "Name of the function or\n the function expression to trigger when the date picker's view changes." },
             { "name": "operation",
               "type": "$w.DatePickerOperation",
-              "doc": "The name of the operation or\n the function expression to trigger when the date picker's view changes." },
+              "doc": "Name of an async operation. The operation result is passed to the handler." },
             { "name": "timeout",
               "type": "number",
-              "doc": "The name of the operation or\n the function expression to trigger when the date picker's view changes." } ],
+              "doc": "Number of seconds to await the operation. If the operation doesn't resolve before the timeout, the operation resolves to an error." } ],
         "ret":
-          { "type": "$w.DatePicker",
-            "doc": "The audio player that triggered the event." },
+          { "type": "$w.DatePickerEventHandler",
+            "doc": "The date picker event object." },
         "locations":
           [ { "lineno": 391,
               "filename": "DatePicker.js" } ],
