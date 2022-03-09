@@ -672,7 +672,40 @@
                 " ",
                 " Note that each time a site visitor enters the date picker, they initiate the view, triggering the event handler." ],
             "links": [],
-            "examples": [],
+            "examples":
+              [ { "title": "Get the event object when the date picker view changes",
+                  "body":
+                    [ "$w('#myDatePicker').onViewChange( (event) => {",
+                      "  let eventObject = event;",
+                      "  let target = event.target; // \"$w('#datePicker1')\"",
+                      "  let startDate = event.options.startDate; // \"Tue Mar 01 2022 00:00:00 GMT+0200 (Israel Standard Time)\"",
+                      "  let endDate = event.options.endDate; // \"Thu Mar 31 2022 23:59:59 GMT+0300 (Israel Daylight Time)\"",
+                      "} );" ],
+                  "extra":
+                    {  } },
+                { "title": "Get the event object when the date picker view changes",
+                  "body":
+                    [ "const timeout = 2000;",
+                      "",
+                      "const operation = () => {",
+                      "  new Promise((resolve) => {",
+                      "    setTimeout(() => {resolve('My operation result')}, 1000);",
+                      "  })",
+                      "}",
+                      "",
+                      "const handler = (event) => {",
+                      "  let eventObject = event;",
+                      "  let target = event.target;",
+                      "  let startDate = event.options.startDate;",
+                      "  let endDate = event.options.endDate;",
+                      "  let opResult = event.options.operationResults; // 'My operation result'",
+                      "}",
+                      "",
+                      "$w('#myDatePicker').onViewChange(handler, operation, timeout) {",
+                      "",
+                      "}" ],
+                  "extra":
+                    {  } } ],
             "extra":
               {  } },
         "extra":
